@@ -1,0 +1,279 @@
+@font-face{
+    font-family: sketchDefault;
+    src: url('fonts/belligerent.ttf');
+}
+
+*{ 
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-family: sketchDefault;
+    font-size: 5em !important;
+    padding-top: 300px;
+    text-align: center;
+    color: #0984e3;
+}
+
+h2{
+    font-family: sketchDefault;
+    font-size: 3em !important;
+    text-align: center;
+    color: #0984e3;
+}
+
+h3{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+q{
+    font-size: 16px; 
+    color: #0984e3;
+    font-style: italic;
+}
+
+#author{
+    text-align: right;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    background-image : url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=e0e0e0&density=100&opacity=30);
+}
+
+header {
+    border: 10px solid transparent;
+    border-image: 
+        url(images/border_1.png) 
+        20 /
+        0px 0px 14px 0px / 
+        0px 0px 10px 0px 
+        round;
+    width: 100%;
+    height: 80px;
+    padding: 0 50px;
+    position: fixed;
+    z-index: 10;
+    background-image : url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=e0e0e0&density=100&opacity=30);
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    
+}
+
+li a {
+    text-decoration: none;
+    display: block;
+    color: #000;
+    font-family: sketchDefault;
+    font-size: 2em;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    border-image:
+        url('images/underline.png')
+        17 /
+        0px 0px 15px 0px /
+        00px 0px 0px 0px
+        round;
+    color: #0984e3;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+}
+
+article{
+    width: 100%;
+    padding-top: 10px; 
+    margin: 50px 0;
+}
+
+#home {
+    background-image: url(images/droplet_transp.png);
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    min-height: 800px;
+}
+
+#water{
+    text-align: center;
+}
+
+#water > img{
+    width: 70%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    width: 45%;
+    min-height: 600px;
+    margin: 10px;
+    padding: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.left{
+    text-align: right;
+    min-height: 100px !important;
+    font-weight: bold;
+}
+
+.right{
+    text-align: left;
+    min-height: 100px !important; 
+    font-weight: bold;
+}
+
+#skillorder{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#skillorder > p {
+    display: inline;
+    font-weight: bold;
+}
+
+iframe{
+    width: 100%;
+    height: 400px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    background: #f1f1f1;
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 25px;
+    border-image: 
+        url(images/border_1.png) 
+        20 /
+        0px 0px 14px 0px / 
+        0px 0px 10px 0px 
+        round;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* --- Skill colours --- */
+.novice{color:#bdc3c7;}
+.ab{color:#2ecc71;}
+.competent{color:#3498db;}
+.proficient{color:#9b59b6;}
+.expert{color:#f39c12;}
+
+
+
+@media only screen and (max-width: 880px) {
+    li a {
+        font-size: 20px;
+    }
+    #contact .flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #contact .flex-container > div{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    header{
+        padding: 0 20px;
+    }
+    
+    li a {
+        font-size: 18px;
+        padding: 5px 6px;
+    }
+    
+    #profiel, #water{
+        display: none;
+    }
+    
+    .text{
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .flex-container > div {
+        background-color: #f1f1f1;
+        width: 45%;
+        min-height: 600px;
+        margin: 5px;
+        padding: 35px;
+    }
+}
